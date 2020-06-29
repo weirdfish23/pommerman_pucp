@@ -33,7 +33,7 @@ def main():
     wins1 = 0
     ties = 0
     batch_size = 500
-    for i_episode in range(300):
+    for i_episode in range(3):
 
         agent_list = [agents.SimpleAgent()]
         dqAgent = agents.BaselineAgent()
@@ -46,7 +46,7 @@ def main():
         done = False
         while not done:
             # env.render(record_json_dir='jsons/')
-            # env.render()
+            env.render()
             actions = env.act(state)
             state, reward, done, info = env.step(actions)
             if done:
