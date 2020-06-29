@@ -1,0 +1,10 @@
+{
+    "agents": "[{\"agent_id\": 0, \"is_alive\": true, \"position\": [3, 0], \"ammo\": 0, \"blast_strength\": 2, \"can_kick\": false}, {\"agent_id\": 1, \"is_alive\": true, \"position\": [6, 4], \"ammo\": 0, \"blast_strength\": 2, \"can_kick\": false}]",
+    "board": "[[0, 1, 1, 0, 2, 1, 0, 0], [1, 0, 0, 0, 0, 2, 2, 0], [1, 0, 0, 7, 2, 1, 0, 1], [10, 0, 0, 0, 2, 2, 0, 0], [2, 3, 2, 2, 0, 1, 3, 2], [1, 2, 1, 2, 1, 0, 0, 1], [0, 2, 0, 0, 11, 0, 0, 1], [0, 0, 1, 0, 8, 1, 1, 0]]",
+    "board_size": "8",
+    "bombs": "[{\"position\": [4, 6], \"bomber_id\": 1, \"life\": 3, \"blast_strength\": 2, \"moving_direction\": null}, {\"position\": [4, 1], \"bomber_id\": 0, \"life\": 4, \"blast_strength\": 2, \"moving_direction\": null}]",
+    "flames": "[]",
+    "intended_actions": "[0, 3]",
+    "items": "[[[1, 6], 6], [[5, 1], 8], [[6, 1], 8], [[4, 3], 7], [[2, 4], 6], [[5, 3], 7], [[3, 5], 8], [[4, 0], 8]]",
+    "step_count": "19"
+}

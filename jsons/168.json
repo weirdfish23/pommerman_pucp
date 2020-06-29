@@ -1,0 +1,10 @@
+{
+    "agents": "[{\"agent_id\": 0, \"is_alive\": true, \"position\": [4, 7], \"ammo\": 1, \"blast_strength\": 4, \"can_kick\": true}, {\"agent_id\": 1, \"is_alive\": true, \"position\": [0, 7], \"ammo\": 1, \"blast_strength\": 3, \"can_kick\": true}]",
+    "board": "[[0, 1, 1, 0, 0, 1, 0, 11], [1, 0, 0, 0, 0, 0, 3, 0], [1, 0, 0, 0, 0, 1, 3, 1], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 1, 0, 10], [1, 0, 1, 0, 1, 0, 0, 1], [0, 0, 0, 0, 0, 0, 0, 1], [0, 0, 1, 0, 0, 1, 1, 0]]",
+    "board_size": "8",
+    "bombs": "[{\"position\": [2, 6], \"bomber_id\": 0, \"life\": 3, \"blast_strength\": 4, \"moving_direction\": null}, {\"position\": [1, 6], \"bomber_id\": 1, \"life\": 3, \"blast_strength\": 3, \"moving_direction\": null}]",
+    "flames": "[]",
+    "intended_actions": "[2, 0]",
+    "items": "[]",
+    "step_count": "168"
+}

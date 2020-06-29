@@ -1,0 +1,10 @@
+{
+    "agents": "[{\"agent_id\": 0, \"is_alive\": true, \"position\": [7, 4], \"ammo\": 1, \"blast_strength\": 4, \"can_kick\": true}, {\"agent_id\": 1, \"is_alive\": true, \"position\": [7, 1], \"ammo\": 2, \"blast_strength\": 3, \"can_kick\": true}]",
+    "board": "[[0, 1, 1, 0, 2, 1, 0, 0], [1, 0, 0, 0, 0, 2, 6, 0], [1, 0, 0, 0, 0, 1, 0, 1], [0, 0, 0, 4, 0, 0, 0, 0], [0, 0, 0, 4, 0, 1, 0, 0], [1, 0, 1, 4, 1, 0, 0, 1], [4, 4, 4, 4, 4, 4, 4, 1], [0, 11, 1, 4, 10, 1, 1, 0]]",
+    "board_size": "8",
+    "bombs": "[]",
+    "flames": "[{\"position\": [3, 3], \"life\": 1}, {\"position\": [4, 3], \"life\": 1}, {\"position\": [5, 3], \"life\": 1}, {\"position\": [6, 0], \"life\": 1}, {\"position\": [6, 1], \"life\": 1}, {\"position\": [6, 2], \"life\": 1}, {\"position\": [6, 3], \"life\": 1}, {\"position\": [6, 4], \"life\": 1}, {\"position\": [6, 5], \"life\": 1}, {\"position\": [6, 6], \"life\": 1}, {\"position\": [7, 3], \"life\": 1}]",
+    "intended_actions": "[0, 4]",
+    "items": "[]",
+    "step_count": "110"
+}
