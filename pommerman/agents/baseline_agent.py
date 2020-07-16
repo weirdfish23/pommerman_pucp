@@ -1,4 +1,4 @@
-'''Baseline agent by Joel Cabrera Rios PUCP'''
+'''DeepQAgent  by Joel Cabrera Rios PUCP'''
 from . import BaseAgent
 
 import random
@@ -8,7 +8,7 @@ from keras.models import Sequential
 from keras.layers import Dense
 from keras.optimizers import Adam
 
-class BaselineAgent(BaseAgent):
+class DeepQAgent(BaseAgent):
     def initDQ(self, state_size=64, action_size=6, learn=True, epsilon=1.0):
         self.state_size = state_size     # tamaño de un estado (numero de atributos que representan un estado)
         self.action_size = action_size   # tamaño del vector de acciones 

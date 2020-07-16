@@ -7,5 +7,5 @@ from .player_agent_blocking import PlayerAgentBlocking
 from .random_agent import RandomAgent
 from .simple_agent import SimpleAgent
 from .tensorforce_agent import TensorForceAgent
-from .baseline_agent import BaselineAgent
+from .baseline_agent import DeepQAgent
 from .adversarialsearch_agent import AdversarialSearchAgent

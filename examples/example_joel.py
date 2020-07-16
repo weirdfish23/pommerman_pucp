@@ -12,13 +12,13 @@ def main():
     # Print all possible environments in the Pommerman registry
     print(pommerman.REGISTRY)
 
-    # dqAgent = agents.BaselineAgent()
+    # dqAgent = agents.DeepQAgent()
     # dqAgent.save('model')
 
     # Create a set of agents (exactly four)
     # agent_list = [
     #     agents.SimpleAgent(),
-        # agents.BaselineAgent().load('model')
+        # agents.DeepQAgent().load('model')
         #agents.SimpleAgent(),
         # agents.RandomAgent(),
         # agents.SimpleAgent(),
@@ -37,8 +37,8 @@ def main():
     for i_episode in tqdm(range(10)):
 
         agent_list = [agents.SimpleAgent()]
-        dqAgent = agents.BaselineAgent()
-        dqAgent.initDQ(learn=True, epsilon=0.5, action_size=5)
+        dqAgent = agents.DeepQAgent()
+        dqAgent.initDQ(learn=False, epsilon=0.5, action_size=5)
         dqAgent.load('model_3x64_40_20_no_bombs')
         agent_list.append(dqAgent)
         env = pommerman.make('OneVsOne-v0', agent_list)
