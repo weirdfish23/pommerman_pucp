@@ -34,13 +34,12 @@ def main():
     wins1 = 0
     ties = 0
     batch_size = 15
-    for i_episode in tqdm(range(10)):
+    for i_episode in tqdm(range(100)):
 
-        agent_list = [agents.SimpleAgent()]
-        dqAgent = agents.BaselineAgent()
-        dqAgent.initDQ(learn=True, epsilon=0.5, action_size=5)
-        dqAgent.load('model_3x64_40_20_no_bombs')
-        agent_list.append(dqAgent)
+        agent_list = [agents.RandomAgent()]
+        adversarialAgent = agents.AdversarialSearchAgent()
+        
+        agent_list.append(adversarialAgent)
         env = pommerman.make('OneVsOne-v0', agent_list)
         env.set_init_game_state('jsons/000.json')
         env.seed(0)
@@ -48,29 +47,11 @@ def main():
         
         done = False
         while not done:
-            # env.render(record_json_dir='jsons/')
-            env.render()
-            actions = env.act(state)
-            prevState = np.ravel(state[1]['board'])
-            prevState= np.reshape(prevState, [1, 64])
-            # print('prev State shape:: ', prevState.shape)
+            # env.render()
 
-            # print('Actions:: ', actions)
+            actions = env.act(state)
             state, reward, done, info = env.step(actions)
 
-            #print('state:: ', state[1]['board'])
-            nextState = np.ravel(state[1]['board'])
-            nextState= np.reshape(nextState, [1, 64])
-            # print('nextState shape:: ', nextState.shape)
-
-            dqAgent.remember(prevState, actions[1], reward[1], nextState, done )
-
-            # print('Memory:: ', len(dqAgent.memory))
-
-            if len(dqAgent.memory) > batch_size:  # si el agente tiene suficiente experiencias en su memoria -> ajusta su modelo neuronal 
-                # print('done replay')
-                dqAgent.replay(batch_size)
-                # print("Done replay:: memory lem", len(dqAgent.memory))
             if done:
                 # print('Done:: ', reward)
                 # print('info:: ', info)
@@ -82,7 +63,6 @@ def main():
                     ties+=1
         # print('Episode {} finished'.format(i_episode))
         
-        # dqAgent.save('model_3x64_40_20')
     print('Results: {}/{}/{}'.format(wins0, wins1, ties))
         
     env.close()

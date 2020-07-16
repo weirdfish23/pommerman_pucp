@@ -8,3 +8,4 @@ from .random_agent import RandomAgent
 from .simple_agent import SimpleAgent
 from .tensorforce_agent import TensorForceAgent
 from .baseline_agent import BaselineAgent
+from .adversarialsearch_agent import AdversarialSearchAgent
